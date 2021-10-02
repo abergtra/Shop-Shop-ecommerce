@@ -21,13 +21,26 @@ const initialState = {
   currentCategory: ''
 }
 
-export const reducer = (state, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
+    //if action.type equals UPDATE_PRODUCTS -> return new state object with new products array
     case UPDATE_PRODUCTS:
       return {
         ...state,
         products: [...action.products],
       };
+    //if action.type equals UPDATE_CATEGORIESS -> return new state object with new products array
+    case UPDATE_CATEGORIES:
+      return {
+        ...state,
+        categories: [...action.categories],
+      };
+
+    case UPDATE_CURRENT_CATEGORY:
+      return {
+        ...state,
+        currentCategory: action.currentCategory
+      }
 
     case ADD_TO_CART:
       return {
@@ -41,6 +54,16 @@ export const reducer = (state, action) => {
         ...state,
         cart: [...state.cart, ...action.products],
       };
+    
+    case REMOVE_FROM_CART:
+      let newState = state.cart.filter(product => {
+        return product._id !== action._id;
+      }); 
+      return {
+        ...state,
+        cartOpen: newState.length > 0,
+        cart: newState
+      };
 
     case UPDATE_CART_QUANTITY:
       return {
@@ -52,17 +75,6 @@ export const reducer = (state, action) => {
           }
           return product
         })
-      };
-
-    case REMOVE_FROM_CART:
-      let newState = state.cart.filter(product => {
-        return product._id !== action._id;
-      });
-
-      return {
-        ...state,
-        cartOpen: newState.length > 0,
-        cart: newState
       };
 
     case CLEAR_CART:
@@ -78,18 +90,7 @@ export const reducer = (state, action) => {
         cartOpen: !state.cartOpen
       };
 
-    case UPDATE_CATEGORIES:
-      return {
-        ...state,
-        categories: [...action.categories],
-      };
-
-    case UPDATE_CURRENT_CATEGORY:
-      return {
-        ...state,
-        currentCategory: action.currentCategory
-      }
-
+   
     default:
       return state;
   }
