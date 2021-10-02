@@ -7,10 +7,15 @@ export function pluralize(name, count) {
 
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
+    //connect to version 1 database
     const request = window.indexedDB.open('shop-shop', 1);
+    //create variables for database, transactions, and object store
     let db, tx, store;
+
+    //create 3 object stores if needed
     request.onupgradeneeded = function(e) {
       const db = request.result;
+      //create object store
       db.createObjectStore('products', { keyPath: '_id' });
       db.createObjectStore('categories', { keyPath: '_id' });
       db.createObjectStore('cart', { keyPath: '_id' });
@@ -47,7 +52,7 @@ export function idbPromise(storeName, method, object) {
           console.log('No valid method');
           break;
       }
-
+      //close connection when transaction complete
       tx.oncomplete = function() {
         db.close();
       };
