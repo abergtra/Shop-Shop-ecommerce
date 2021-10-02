@@ -15,7 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "graphql": "^15.6.0",
     "if-env": "^1.0.4",
+    "mongoose": "^6.0.8",
+    "react-redux": "^7.2.5",
     "stripe": "^8.176.0"
   },
   "devDependencies": {
