@@ -3,7 +3,7 @@ Challenge 22
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # Description
-This project involves refactoring a fully functional e-commerce website to use Redux
+This project involves refactoring a fully functional e-commerce website to use Redux.
 
 ![First Page](./assets/page1.png)
 
