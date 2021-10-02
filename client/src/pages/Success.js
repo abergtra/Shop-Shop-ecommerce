@@ -21,14 +21,16 @@ function Success() {
         });
       }
         
-      setTimeout(() => {
-        window.location.assign('/');
-      }, 3000);
+      
     }
 
     saveOrder();
   }, [addOrder]);
 
+  setTimeout(() => {
+    window.location.assign('/');
+  }, 3000);
+  
   return (
     <div>
       <Jumbotron>
