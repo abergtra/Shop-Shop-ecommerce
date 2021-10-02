@@ -13,7 +13,13 @@ import {
 } from "./actions";
 
 //establish initial state
-
+const initialState = {
+  products: [],
+  cart: [],
+  cartOpen: false,
+  categories: [],
+  currentCategory: ''
+}
 
 export const reducer = (state, action) => {
   switch (action.type) {
