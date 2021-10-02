@@ -7,7 +7,7 @@ This project involves refactoring a fully functional e-commerce website to use R
 
 ![First Page](./assets/page1.png)
 
-Follow this [link](https://github.com/abergtra/challenge-13) for the GitHub repository.
+Follow this [link](https://github.com/abergtra/challenge-22) for the GitHub repository.
 
 # Table of Contents 
 * [Installation](#-Installation)
@@ -18,45 +18,30 @@ Follow this [link](https://github.com/abergtra/challenge-13) for the GitHub repo
 * [Questions](#-Questions)
     
 # Installation
-Step #1: Run `npm install` in your command line. Ensure all required libraries are installed (express, sequelize, mysql2, etc).
-
-Step #2: Start your mysql.
-
-Step #3: Create a .env file with your password.
-
-Step #4: Run `npm run seed` in you command line.
-
-Step #5: Run `node server.js` in you command line.
-
-Step #6: Open Insomnia and explore your new backend product!
-
-Installation Walkthrough:
-
-![Set Up Walkthrough](./assets/setup.gif)
-
-A video walkthrough is also available if you follow this [link](https://youtu.be/bdrpvL1s2Ts).
+Navigate to the live url. No installation necessary!
 
 # Usage
-Explore the back end product's functionality by following the "Installation" instructions until you are ready with Insomnia.
-Here are some examples of what you can do with this product.
+Follow the [live url](https://challenge-22.herokuapp.com/) to access the ecommerce site!
 
-Categories Walkthrough:
+Sign Up:
 
-![Categories Walkthrough](./assets/categories.gif)
+![Sign Up](./assets/page2.png)
 
-A video walkthrough is also available if you follow this [link](https://youtu.be/m52rLbBrGuw).
+New Home page after Logging in:
 
-Tags Walkthrough:
+![Logged in](./assets/page3.png)
 
-![Tags Walkthrough](./assets/tags.gif)
+Add a product to Cart:
 
-A video walkthrough is also available if you follow this [link](https://youtu.be/6AI0i1G0aGU).
+![Add to Cart](./assets/page4.png)
 
-Products Walkthrough:
+Buy Products:
 
-![Products Walkthrough](./assets/products.gif)
+![Stripe](./assets/page5.png)
 
-A video walkthrough is also available if you follow this [link](https://youtu.be/r15rppoT7jM).
+Check out just one category of product:
+
+![Category](./assets/page6.png)
 
 # License 
 [License: MIT](https://opensource.org/licenses/MIT) 
