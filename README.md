@@ -1,5 +1,5 @@
 # Project Title
-Challenge 22
+Shop-Shop-ecommerce
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 # Description
